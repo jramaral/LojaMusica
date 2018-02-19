@@ -1,0 +1,41 @@
+﻿@model Music.Contexto.Album
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <h1 class="titulo-h1">Listagem de Album</h1>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <label>Selecione o Album</label>
+            @Html.DropDownList("Album",null, "Selecione um Album", new { @class = "form-control" })
+        </div>
+        <button type="button" id="pesquisar" class="btn btn-primary">Pesquisar</button>
+      
+        @Html.ActionLink("Nova Musica", "Adicionar",null,new { @class = "btn btn-success", id="new-music"} )
+
+    </form>
+    <section class="secao-pesquisa">
+
+        <table class="table table-responsive table-custom">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome da Música</th>
+                    <th>Gênero</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="resultados"></tbody>
+        </table>
+    </section>
+
+
+@section ScriptPage{
+   
+<script src="~/Scripts/js/jsmuscia.js"></script>
+
+}
