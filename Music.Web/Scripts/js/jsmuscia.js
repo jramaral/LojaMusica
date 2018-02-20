@@ -1,4 +1,4 @@
-﻿var corpoTabela = $(".secao-pesquisa").find("tbody");
+﻿var corpoTabela = $("#secao-pesquisa").find("tbody");
 
 $(document).ready(function () {
 
@@ -6,7 +6,7 @@ $(document).ready(function () {
     validarBotaoNovo();
     aceitarNumeros();
     destativarCampo();
-    removeItem();
+    formatar();
 
 
 });
@@ -42,7 +42,7 @@ function novaLinha(codigo, faixa, genero, preco) {
 
     link.append(icone);
 
-    var link1 = $("<a>").addClass("btn btn-danger btn-xs").attr("href", pathExcluir).attr("id", "excluir");
+    var link1 = $("<a>").addClass("btn btn-danger btn-xs").attr("onclick","Deletar(" + codigo + ")").attr("id", "excluir");
     var icone1 = $("<span>").addClass("glyphicon glyphicon-trash").attr("aria-hidden", "true");
 
     link1.append(icone1);
@@ -60,31 +60,38 @@ function novaLinha(codigo, faixa, genero, preco) {
 }
 
 
+
+function pesquisar()
+{
+    var pesquisa = { albumid: $("#Album").val() };
+
+    $.getJSON("/musicas/pesquisar", pesquisa, function (data) {
+
+        var resultados = $("#resultados");
+
+        resultados.empty();
+
+        if (data.length == 0) {
+            resultados.append('<div class="alert alert-danger">Nenhuma música encontrado para o album escolhido! :(</div>');
+            return false;
+        }
+
+        for (var i = 0; i < data.length; i++) {
+
+            var linha = novaLinha(data[i].Codigo, data[i].Nome, data[i].Genero, data[i].Preco);
+            console.log(linha);
+            corpoTabela.append(linha);
+
+        }
+
+    });
+}
+
+
+
 function pesquisarFaixa() {
     $("#pesquisar").on("click", function () {
-        var pesquisa = { albumid: $("#Album").val() };
-
-        $.getJSON("/musicas/pesquisar", pesquisa, function (data) {
-
-            var resultados = $("#resultados");
-
-            resultados.empty();
-
-            if (data.length == 0) {
-                resultados.append('<div class="alert alert-danger">Nenhuma música encontrado para o album escolhido! :(</div>');
-                return false;
-            }
-
-            for (var i = 0; i < data.length; i++) {
-
-                var linha = novaLinha(data[i].Codigo, data[i].Nome, data[i].Genero, data[i].Preco);
-                console.log(linha);
-                corpoTabela.append(linha);
-
-            }
-
-        });
-        return false;
+        pesquisar();
     });
 
 
@@ -101,31 +108,27 @@ function destativarCampo() {
     $("#titulo-album-desativado").attr("disabled", true);
 }
 
-function removeItem() {
+function Deletar(idFaixa) {
+  
+    var confirmar = confirm("Deseja Realmente apagar?");
 
-   
-    var linhaAtual;
-    $("#excluir").on("click", function () {
-       
-            var urlExclusao = $(this).attr("href");
-            linhaAtual = $(this).closest("tr");
-
-            $.ajax({
-                url: urlExclusao,
-                type: "POST"
-            }).done(function (excluiu) {
-                if (excluiu) {
-                    linhaAtual.remove();
-                } else {
-                    alert("Ocorreu algum problema na exclusão do médico :(");
-                }
-            }).fail(function () {
+    if (confirmar) {
+  
+        $.ajax({
+            type: 'POST',
+            url: "/Musicas/Deletar",
+            data: { id: idFaixa },
+            success: function () {
+                pesquisar();
+            },
+            error: function () {
                 alert("Ocorreu algum erro :(");
-            });
-        
-
-        //return false;
-   });
+            }
+        });
+    }
 }
 
-
+function formatar(){
+    $("#TipoMidiaId").addClass("form-control");
+    $("#GeneroID").addClass("form-control");
+}

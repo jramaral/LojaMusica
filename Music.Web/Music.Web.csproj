@@ -107,9 +107,12 @@
     <Content Include="img\music.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\js\jsartista.js" />
+    <Content Include="Scripts\js\jsalbum.js" />
+    <Content Include="Scripts\js\jshome.js" />
     <Content Include="Scripts\js\jsmuscia.js" />
     <Content Include="Scripts\js\main.js" />
     <Content Include="Web.config" />
@@ -138,7 +141,8 @@
     <Content Include="Views\Musicas\Adicionar.cshtml" />
     <Content Include="Views\Artista\Adicionar.cshtml" />
     <Content Include="Views\Artista\Editar.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Musicas\Editar.cshtml" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

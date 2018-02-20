@@ -23,7 +23,14 @@ namespace Music.Dominio
         }
         public List<Album> BuscarTodos()
         {
-            return contexto.Album.Where(a=> a.AlbumId<10).ToList();
+
+           
+            var reg = contexto.Album.Count();
+            var temp = reg -10;
+
+            return contexto.Album.Where(a => a.AlbumId > temp).ToList();
+
+
         }
         
         public void Salvar(Album album)
@@ -36,6 +43,24 @@ namespace Music.Dominio
             contexto.Entry(album).State = EntityState.Modified;
             
             contexto.SaveChanges();
+        }
+
+        public bool Excluir(int id)
+        {
+            try
+            {
+                var album = contexto.Album.Find(id);
+                contexto.Album.Remove(album);
+                contexto.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+
         }
     }
 }

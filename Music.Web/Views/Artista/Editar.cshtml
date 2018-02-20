@@ -4,14 +4,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Editar</h2>
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h1 class="titulo-h1">Editando Artista</h1>
+        <div class="page-header page-header-loja">
+            <h1 class="titulo-h1">Editando Artista</h1>
+        </div>
         <hr />
        
         <div class="form-group">

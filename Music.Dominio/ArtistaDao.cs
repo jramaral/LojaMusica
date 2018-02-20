@@ -26,15 +26,36 @@ namespace Music.Dominio
             contexto.Artista.Add(artista);
             contexto.SaveChanges();
         }
+
         public Artista BuscarPorId(int id)
         {
             return contexto.Artista.FirstOrDefault(a => a.ArtistaId == id);
         }
+
         public void SalvarAlteracao(Artista artista)
         {
             contexto.Entry(artista).State = EntityState.Modified;
 
             contexto.SaveChanges();
+        }
+
+        public bool Excluir(int id)
+        {
+            try
+            {
+                var artista = contexto.Artista.Find(id);
+                contexto.Artista.Remove(artista);
+                contexto.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+
         }
     }
 }

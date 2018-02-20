@@ -63,6 +63,22 @@ namespace Music.Web.Controllers
             return View(album);
         }
 
+        //Método para excluir uma artista
+        [HttpPost]
+        public void Deletar(int id)
+        {
+            try
+            {
+                bool TrueOrFalse = dao.Excluir(id);
+
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
 
     }
     

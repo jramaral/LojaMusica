@@ -1,6 +1,7 @@
 ﻿using Music.Contexto;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,11 +31,19 @@ namespace Music.Dominio
             return contexto.Faixa.Where(a => a.FaixaId > 340).ToList();
         }
 
-        public void  Salvar(Faixa musica)
+        public void  Salvar(Faixa faixa)
         {
-            contexto.Faixa.Add(musica);
+            contexto.Faixa.Add(faixa);
             contexto.SaveChanges();
             
+        }
+
+        public void SalvarAlteracao(Faixa faixa)
+        {
+            contexto.Entry(faixa).State = EntityState.Modified;
+            contexto.SaveChanges();
+           
+
         }
 
         public bool Excluir(int id)

@@ -1,0 +1,105 @@
+﻿@model Music.Contexto.Faixa
+@{
+    ViewBag.Title = "Adicionar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<<div class="page-header page-header-loja">
+    <h1 class="titulo-h1">Editando Música</h1>
+</div>
+
+<div row>
+
+    @using (Html.BeginForm())
+    {
+
+        <div class="form-horizontal">
+            <hr />
+            <div class="form-group">
+                @Html.HiddenFor(model => model.FaixaId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.HiddenFor(model => model.FaixaId, new { htmlAttributes = new { @class = "form-control" } })
+
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+
+                </div>
+            </div>
+            @* Album *@
+            <div class="form-group">
+                @Html.HiddenFor(model => model.AlbumId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.HiddenFor(model => model.AlbumId, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Título Album", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input id="titulo-album-desativado" class="form-control" value="@ViewBag.TituloAlbum" />
+                </div>
+            </div>
+
+            @* TipoMidia *@
+            <div class="form-group">
+                @Html.LabelFor(model => model.TipoMidiaId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-5">
+                    @Html.DropDownList("TipoMidiaId", string.Empty)
+                </div>
+
+            </div>
+
+            @* Genero *@
+            <div class="form-group">
+                @Html.LabelFor(model => model.GeneroId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-5">
+                    @Html.DropDownList("GeneroID", string.Empty)
+                </div>
+
+            </div>
+            <div class="form-group">
+                @Html.Label("Compositor", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Compositor, new { htmlAttributes = new { @class = "form-control" } })
+
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Milissegundos", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.Milissegundos, new { htmlAttributes = new { @class = "form-control", type = "number" } })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Bytes", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.Bytes, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Preço Unitário", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.PrecoUnitario, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+                <div class="btn btn-default">
+                    @Html.ActionLink("Voltar", "Index")
+                </div>
+            </div>
+
+        </div>
+
+    }
+</div>
+
+@section ScriptPage{
+    <script src="~/Scripts/js/jsmuscia.js"></script>
+}

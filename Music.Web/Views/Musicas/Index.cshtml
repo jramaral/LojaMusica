@@ -5,37 +5,36 @@
 }
 
 
-    <h1 class="titulo-h1">Listagem de Album</h1>
+<div class="page-header page-header-loja">
+    <h1 class="titulo-h1">Listagem de Músicas</h1>
+</div>
 
-    <form class="form-inline">
-        <div class="form-group">
-            <label>Selecione o Album</label>
-            @Html.DropDownList("Album",null, "Selecione um Album", new { @class = "form-control" })
-        </div>
-        <button type="button" id="pesquisar" class="btn btn-primary">Pesquisar</button>
-      
-        @Html.ActionLink("Nova Musica", "Adicionar",null,new { @class = "btn btn-success", id="new-music"} )
+<form class="form-inline">
+    <div class="form-group">
+          @Html.DropDownList("Album", null, "Selecione um Album", new { @class = "form-control" })
+    </div>
+    <button type="button" id="pesquisar" class="btn btn-primary">Pesquisar</button>
 
-    </form>
-    <section class="secao-pesquisa">
+    @Html.ActionLink("Nova Musica", "Adicionar", null, new { @class = "btn btn-success", id = "new-music" })
 
-        <table class="table table-responsive table-custom">
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Nome da Música</th>
-                    <th>Gênero</th>
-                    <th>Preço</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody id="resultados"></tbody>
-        </table>
-    </section>
+</form>
 
+
+<table id="secao-pesquisa" class="table">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome da Música</th>
+            <th>Gênero</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody id="resultados"></tbody>
+</table>
 
 @section ScriptPage{
-   
-<script src="~/Scripts/js/jsmuscia.js"></script>
+
+    <script src="~/Scripts/js/jsmuscia.js"></script>
 
 }
