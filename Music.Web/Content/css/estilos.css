@@ -11,8 +11,9 @@
     color: white;
 }
 
-.page-header-loja{
-    background-color: cadetblue;
+.page-header-loja {
+    background-color: #008080;
+    border-radius:10px;
 }
 .page-header-loja h1 {
     padding-left:10px;

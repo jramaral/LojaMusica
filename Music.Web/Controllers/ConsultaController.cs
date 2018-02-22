@@ -24,9 +24,10 @@ namespace Music.Web.Controllers
         //Método para pesquisar 
         public ActionResult Pesquisar(int ConsultaId)
         {
-            dao.getResultado(ConsultaId);
-            var query = "teste";
-        
+           
+            var query = dao.getResultado(ConsultaId);
+           
+            
 
             return Json(query, JsonRequestBehavior.AllowGet);
         }
