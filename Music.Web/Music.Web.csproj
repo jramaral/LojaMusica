@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -112,6 +113,7 @@
     <Content Include="Scripts\jquery-1.12.4.min.js" />
     <Content Include="Scripts\js\jsartista.js" />
     <Content Include="Scripts\js\jsalbum.js" />
+    <Content Include="Scripts\js\jsconsulta.js" />
     <Content Include="Scripts\js\jshome.js" />
     <Content Include="Scripts\js\jsmuscia.js" />
     <Content Include="Scripts\js\main.js" />
@@ -124,6 +126,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ArtistaController.cs" />
+    <Compile Include="Controllers\ConsultaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MusicasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -143,6 +146,7 @@
     <Content Include="Views\Artista\Editar.cshtml" />
     <Content Include="Views\Musicas\Editar.cshtml" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <Content Include="Views\Consulta\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

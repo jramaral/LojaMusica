@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="AlbumDao.cs" />
     <Compile Include="ArtistaDao.cs" />
+    <Compile Include="ConsultaDao.cs" />
     <Compile Include="GeneroDao.cs" />
     <Compile Include="MusicaDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

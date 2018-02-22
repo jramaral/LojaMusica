@@ -42,5 +42,6 @@ C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Dominio\bin\Debu
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Dominio\bin\Debug\System.Interactive.Async.xml
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Dominio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Dominio\obj\Debug\Music.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Dominio\obj\Debug\Music.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Dominio\obj\Debug\Music.Dominio.dll
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Dominio\obj\Debug\Music.Dominio.pdb

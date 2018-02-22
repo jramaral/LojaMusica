@@ -38,6 +38,7 @@ C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Contexto\bin\Deb
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Contexto\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Contexto\bin\Debug\System.Interactive.Async.xml
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Contexto\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Contexto\obj\Debug\Music.Contexto.csprojResolveAssemblyReference.cache
+C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Contexto\obj\Debug\Music.Contexto.csproj.CoreCompileInputs.cache
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Contexto\obj\Debug\Music.Contexto.dll
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Contexto\obj\Debug\Music.Contexto.pdb
-C:\Users\jose\Documents\Visual Studio 2017\Projects\Music\Music.Contexto\obj\Debug\Music.Contexto.csprojResolveAssemblyReference.cache

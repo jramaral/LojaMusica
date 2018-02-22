@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header page-header-loja">
+    <h1 class="titulo-h1">Consultas</h1>
+</div>
+
+
+<form class="form-inline">
+    <div class="form-group">
+        @Html.DropDownList("TipoConsulta", string.Empty)
+    </div>
+    <button type="button" id="pesquisar" class="btn btn-primary">Pesquisar</button>
+</form>
+
+<div class="row">
+    <div id="resultado-consulta"></div>
+</div>
+
+
+@section ScriptPage{
+
+    <script src="~/Scripts/js/jsconsulta.js"></script>
+
+}
+
+

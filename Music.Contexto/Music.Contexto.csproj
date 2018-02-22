@@ -114,6 +114,7 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>
+    <Compile Include="Consulta.cs" />
     <Compile Include="Faixa.cs">
       <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>

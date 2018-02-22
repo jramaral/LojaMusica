@@ -12,6 +12,7 @@ namespace Music.Dominio
         public string Nome { get; set; }
         public decimal Preco { get; set; }
         public string Genero { get; set; }
+        public decimal Total { get; set; }
 
     }
 }

@@ -51,5 +51,6 @@ C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Web\bin\System.W
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Web\bin\System.Web.Mvc.xml
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Web\bin\EntityFramework.xml
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Web\obj\Debug\Music.Web.csprojResolveAssemblyReference.cache
+C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Web\obj\Debug\Music.Web.csproj.CoreCompileInputs.cache
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Web\obj\Debug\Music.Web.dll
 C:\Users\jose\documents\visual studio 2017\Projects\Music\Music.Web\obj\Debug\Music.Web.pdb
