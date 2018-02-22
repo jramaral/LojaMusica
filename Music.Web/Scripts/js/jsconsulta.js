@@ -38,9 +38,9 @@ function pesquisar() {
 
             resultados.append('<div class="col-sm-6 col-md-4"><div class="thumbnail panel-success"><div class="caption"><h4>'
                 + data[i].Nome +
-                '</h4><p>Quantidade: ' + data[i].Quantidade + '</p></div></div ></div>');
-
-
+                '</h4><p>Quantidade: ' + data[i].Quantidade + '</p>' +
+                '<p><strong>Total: ' + data[i].Total + '</strong></p></div></div></div>'
+            );
 
         }
 

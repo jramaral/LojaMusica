@@ -61,7 +61,8 @@ namespace Music.Dominio
                                       {
                                           Codigo=agrupados.Key.ArtistaId,
                                           Nome=artista.Faixa.Album.Artista.Nome,
-                                          Quantidade=qtde
+                                          Quantidade=qtde,
+                                          Total= (artista.Faixa.PrecoUnitario * qtde)
                                       });
 
            switch (id)
