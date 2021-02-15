@@ -50,7 +50,7 @@ namespace Music.Dominio
             try
             {
                 var album = contexto.Album.Find(id);
-                contexto.Album.Remove(album);
+                contexto.Album.Remove(album ?? throw new InvalidOperationException());
                 contexto.SaveChanges();
 
                 return true;

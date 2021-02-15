@@ -25,7 +25,7 @@ namespace Music.Web.Controllers
         public ActionResult Pesquisar(int ConsultaId)
         {
            
-            var query = dao.getResultado(ConsultaId);
+            var query = dao.GetResultado(ConsultaId);
            
             
 

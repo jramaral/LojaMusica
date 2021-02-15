@@ -44,7 +44,7 @@ namespace Music.Dominio
             try
             {
                 var artista = contexto.Artista.Find(id);
-                contexto.Artista.Remove(artista);
+                contexto.Artista.Remove(artista ?? throw new InvalidOperationException());
                 contexto.SaveChanges();
 
                 return true;

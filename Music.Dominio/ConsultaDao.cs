@@ -34,18 +34,18 @@ namespace Music.Dominio
             return query;
         }
 
-        public List<Resultado> getResultado(int id)
+        public List<Resultado> GetResultado(int id)
         {
 
             
             var query = (from faixas in contexto.ItemNotaFiscal
                          group faixas by new { faixas.FaixaId }
-                         into Agrupados
-                         let qtde = contexto.ItemNotaFiscal.Count(f => f.FaixaId == Agrupados.Key.FaixaId)
-                         let faixa = contexto.ItemNotaFiscal.FirstOrDefault(f => f.FaixaId.Equals(Agrupados.Key.FaixaId))
+                         into agrupados
+                         let qtde = contexto.ItemNotaFiscal.Count(f => f.FaixaId == agrupados.Key.FaixaId)
+                         let faixa = contexto.ItemNotaFiscal.FirstOrDefault(f => f.FaixaId.Equals(agrupados.Key.FaixaId))
                          select new Resultado
                          {
-                             Codigo = Agrupados.Key.FaixaId,
+                             Codigo = agrupados.Key.FaixaId,
                              Nome = faixa.Faixa.Nome,
                              Quantidade = qtde,
                              Total = (faixa.PrecoUnitario * qtde)
